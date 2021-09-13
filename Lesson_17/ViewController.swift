@@ -8,12 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var contactViews: [UIView]!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+        contactViews.sort { previous, nextView in
+            return nextView.tag > previous.tag
+        }
+        
+//        for contactView in contactViews {
+//            contactView.update(image: , title: "View")
+//    }
 
 
 }
 
+}
