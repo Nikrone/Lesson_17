@@ -8,23 +8,26 @@
 import Foundation
 import UIKit
 
-class ContactContentView: UIView {
+// имя файла xib и swift файла ДОЛЖНЫ БЫТЬ ОДИНАКОВЫ!
+
+class ContactContentView: BaseDesignableView {
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     
     private var contentView: UIView!
+        
+        func update(image: UIImage?, title: String) {
+            imageView.image = image
+            titleLabel.text = title
+        }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        backgroundColor = .clear
-        contentView = UINib(nibName: "ContactContentView", bundle: Bundle.main).instantiate(withOwner: self, options: nil).first as! UIView
-        contentView.frame = bounds
-        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        addSubview(contentView)
-    }
-    
-    func update(image: UIImage, title: String) {
-        imageView.image = image
-        titleLabel.text = title
+    func makeEnable(isEnabled: Bool) {
+        if isEnabled {
+            titleLabel.textColor = .black
+            imageView.tintColor = .black
+        } else {
+            titleLabel.textColor = .gray
+            imageView.tintColor = .gray
+        }
     }
 }

@@ -9,20 +9,29 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var contactViews: [UIView]!
+    @IBOutlet var contactViews: [ContactContentView]!
     
-
+    var names: [String] = ["Message", "Call", "Video", "Mail"]
+    var icons: [UIImage?] = [UIImage(systemName: "message"), UIImage(systemName: "phone"), UIImage(systemName: "video"), UIImage(systemName: "mail")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        contactViews.sort { previous, nextView in
-            return nextView.tag > previous.tag
+//        сортировка collection Views
+        contactViews.sort { previousView, nextView in
+            return nextView.tag > previousView.tag
         }
         
-//        for contactView in contactViews {
-//            contactView.update(image: , title: "View")
-//    }
-
-
-}
-
+        for index in 0..<contactViews.count {
+//            дизэйблим элемент в коллекции
+            contactViews[index].makeEnable(isEnabled: index == 2)
+            contactViews[index].update(
+                image: icons[index],
+                title: names[index]
+            )
+        }
+//        тоже самый дизэйбл
+        contactViews[2].makeEnable(isEnabled: false)
+        
+    }
+    
 }

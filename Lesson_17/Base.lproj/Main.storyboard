@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,44 +13,47 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lesson_17" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="HjO-wo-Suo">
-                                <rect key="frame" x="20" y="126" width="374" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yOj-7W-r6e">
+                                <rect key="frame" x="8" y="94" width="374" height="70"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OqN-hW-AAw" userLabel="ContactContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zeo-AZ-HHp" customClass="ContactContentView" customModule="Lesson_17" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <view tag="1" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F8O-tE-DWU" userLabel="ContactContentView">
-                                        <rect key="frame" x="95" y="0.0" width="80" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agX-uS-Hqj" customClass="ContactContentView" customModule="Lesson_17" customModuleProvider="target">
+                                        <rect key="frame" x="95.666666666666686" y="0.0" width="87.333333333333314" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <view tag="2" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i23-0g-cap" userLabel="ContactContentView">
-                                        <rect key="frame" x="190" y="0.0" width="80" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILc-HV-eHW" customClass="ContactContentView" customModule="Lesson_17" customModuleProvider="target">
+                                        <rect key="frame" x="191" y="0.0" width="87.666666666666686" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <view tag="3" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yQK-0G-W6Y" userLabel="ContactContentView">
-                                        <rect key="frame" x="285" y="0.0" width="89" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0c-KN-Jeg" customClass="ContactContentView" customModule="Lesson_17" customModuleProvider="target">
+                                        <rect key="frame" x="286.66666666666669" y="0.0" width="87.333333333333314" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="qoI-qq-jeX"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
-                            <constraint firstItem="HjO-wo-Suo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0an-bD-2u2"/>
-                            <constraint firstItem="HjO-wo-Suo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="3Sc-f3-gCV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HjO-wo-Suo" secondAttribute="trailing" constant="20" id="cHh-ko-r7C"/>
+                            <constraint firstItem="yOj-7W-r6e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="0Uu-i0-g6R"/>
+                            <constraint firstItem="yOj-7W-r6e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="kzb-mX-6ou"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yOj-7W-r6e" secondAttribute="trailing" constant="8" id="oAe-r5-CC4"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outletCollection property="contactViews" destination="OqN-hW-AAw" collectionClass="NSMutableArray" id="EF3-Ji-cnU"/>
-                        <outletCollection property="contactViews" destination="F8O-tE-DWU" collectionClass="NSMutableArray" id="QiE-aD-WP9"/>
-                        <outletCollection property="contactViews" destination="i23-0g-cap" collectionClass="NSMutableArray" id="39c-Ab-mCa"/>
-                        <outletCollection property="contactViews" destination="yQK-0G-W6Y" collectionClass="NSMutableArray" id="KdC-LV-CuQ"/>
+                        <outletCollection property="contactViews" destination="zeo-AZ-HHp" collectionClass="NSMutableArray" id="pPs-W2-T2N"/>
+                        <outletCollection property="contactViews" destination="agX-uS-Hqj" collectionClass="NSMutableArray" id="RJu-Lq-kI3"/>
+                        <outletCollection property="contactViews" destination="ILc-HV-eHW" collectionClass="NSMutableArray" id="W2U-mQ-Z3Z"/>
+                        <outletCollection property="contactViews" destination="v0c-KN-Jeg" collectionClass="NSMutableArray" id="dbL-Ye-sem"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
